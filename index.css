@@ -1,0 +1,67 @@
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #2c3e50, #4ca1af);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.Auth {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+  display: flex;
+  flex-direction: column; 
+  justify-content: space-between; 
+  align-items: center;
+
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(10px);
+  padding: 40px 30px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+
+  width: 90vw;
+  max-width: 700px;
+  min-height: 400px;
+  border: 1px solid rgba(255, 255, 255, 0.527);
+  opacity: 0.9;
+}
+  
+.Button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  width: 300px;
+  margin: 16px;
+  font-family: sans-serif;
+  color: white;
+  -webkit-text-stroke: 1px black;
+  text-shadow: 1px 1px 2px black;
+  font-weight: bold;
+  font-size: 2rem;
+  background-color: darkgrey;
+  border: 2px solid black;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.3s ease;
+  text-align: center;
+}
+
+.Button:hover {
+  transform: scale(1.05);
+  background-color: grey;
+}
+
+h1 {
+  margin: 0;
+  font-size: 3rem;
+  color: white;
+  text-align: center;
+  justify-content: center;
+}

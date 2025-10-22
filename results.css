@@ -1,0 +1,119 @@
+:root {
+  --bg-a:#2c3e50;
+  --bg-b:#4ca1af;
+  --glass: rgba(255,255,255,0.18);
+  --accent: #4ca1af;
+  --text-on-glass:#fff;
+}
+
+html,body {
+  margin:0;
+  font-family:Arial,sans-serif;
+  background:linear-gradient(to right,var(--bg-a),var(--bg-b));
+  min-height:100%;
+  color:white;
+}
+
+.topbar {
+  position:fixed;
+  top:0; left:0; right:0;
+  height:64px;
+  display:flex;
+  align-items:center;
+  gap:12px;
+  padding:8px 12px;
+  background:var(--glass);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid rgba(255,255,255,0.12);
+  z-index:20;
+}
+.iconBtn {display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:10px;background:transparent;border:none;color:var(--text-on-glass);cursor:pointer;}
+.profile {display:flex;align-items:center;gap:10px;color:var(--text-on-glass);}
+.avatar {width:44px;height:44px;border-radius:10px;background:var(--glass);}
+.logout {margin-left:auto;padding:8px 14px;background:darkgrey;color:white;border:2px solid black;cursor:pointer;border-radius:8px;}
+
+.container {
+  padding-top:80px;
+  display:flex;
+  flex-direction:column;
+  gap:16px;
+  align-items:center;
+}
+h1 {color:white;}
+
+.resultCard {
+  width:90%;
+  max-width:650px;
+  background:rgba(255,255,255,0.18);
+  backdrop-filter:blur(8px);
+  border-radius:12px;
+  padding:12px;
+  margin-bottom:16px;
+  color:white;
+}
+
+.matchHeader {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:10px;
+  margin-bottom:10px;
+}
+
+.teamBlock {
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  text-align:center;
+  gap:4px;
+}
+
+.teamBlock img {
+  width:50px;
+  height:50px;
+  border-radius:8px;
+  object-fit:cover;
+  border:1px solid rgba(255,255,255,0.3);
+}
+
+.statsSection {
+  margin-top:6px;
+  background:rgba(255,255,255,0.12);
+  padding:6px 8px;
+  border-radius:8px;
+}
+.statsSection h3 {margin:4px 0;font-size:0.95rem;}
+.statsSection p {margin:2px 0;font-size:0.9rem;}
+
+.likesComments {
+  display:flex;
+  flex-direction:column;
+  margin-top:8px;
+}
+.likesComments .commentInput {
+  width:100%;
+  padding:6px;
+  margin-top:4px;
+  border-radius:4px;
+  border:none;
+}
+.likesComments .commentBtn {
+  padding:4px 8px;
+  margin-top:4px;
+  background:#3498db;
+  color:white;
+  border:none;
+  border-radius:4px;
+  cursor:pointer;
+}
+.likesComments .commentBtn:hover {background:#2980b9;}
+.commentItem {margin-left:4px;font-size:0.9rem;margin-top:2px;}
+.deleteBtn {
+  margin-top:6px;
+  background:red;
+  padding:4px 6px;
+  border:none;
+  border-radius:4px;
+  color:white;
+  cursor:pointer;
+}

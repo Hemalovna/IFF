@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Standings</title>
+  <link rel="stylesheet" href="standings.css" />
+  <script defer src="protect.js"></script>
+  <script defer src="standings.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <a href="dashboard.html" class="backBtn">←</a>
+    <h1>Standings</h1>
+    <button id="logoutBtn" class="logout">Logout</button>
+  </header>
+
+  <main class="container">
+    <div class="season-select">
+      <label for="seasonSelect">Season:</label>
+      <select id="seasonSelect"></select>
+    </div>
+
+    <section class="section-card">
+      <h2>🏆 Team Standings</h2>
+      <table id="teamStandingsTable">
+        <thead>
+          <tr>
+            <th>Team</th>
+            <th>MP</th>
+            <th>W</th>
+            <th>D</th>
+            <th>L</th>
+            <th>GF</th>
+            <th>GA</th>
+            <th>Pts</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+
+    <section class="section-card">
+      <h2>⚽ Fielders Stats</h2>
+      <table id="fielderTable">
+        <thead>
+          <tr>
+            <th>Player</th>
+            <th>Team</th>
+            <th>G</th>
+            <th>A</th>
+            <th>P</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+
+    <section class="section-card">
+      <h2>🧤 Goalkeepers Stats</h2>
+      <table id="goalkeeperTable">
+        <thead>
+          <tr>
+            <th>Player</th>
+            <th>Team</th>
+            <th>Saves</th>
+            <th>Conceded</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+  </main>
+</body>
+</html>

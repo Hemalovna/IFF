@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="dashboard.css" />
+  <script defer src="protect.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <a href="home.html" class="backBtn" aria-label="Back to home">←</a>
+    <h1>Dashboard</h1>
+    <button id="logoutBtn" class="logout">Logout</button>
+  </header>
+
+  <main class="container">
+    <div class="grid">
+      <!-- ✅ Active pages -->
+      <button class="dashBtn" onclick="location.href='teams.html'">Teams</button>
+      <button class="dashBtn" onclick="location.href='users.html'">Users</button>
+      <button class="dashBtn" onclick="location.href='fixtures.html'">Match Fixtures</button>
+      <button class="dashBtn" onclick="location.href='results.html'">Match Results</button>
+      <button class="dashBtn" onclick="location.href='standings.html'">Standings</button>
+
+      <button class="dashBtn" onclick="location.href='reports.html'">Reports</button>
+      <button class="dashBtn" onclick="location.href='game-news.html'">Game news</button>
+      <button class="dashBtn" onclick="location.href='fan-posts.html'">Fans Posts</button>
+    </div>
+  </main>
+
+  <script>
+    // Logout logic
+    const logoutBtn = document.getElementById("logoutBtn");
+    logoutBtn.addEventListener("click", () => {
+      try {
+        const raw = JSON.parse(localStorage.getItem('onlineUsers') || '[]');
+        const updated = (raw || []).filter(item => (typeof item === 'string' ? item !== localStorage.getItem('loggedInUser') : item.username !== localStorage.getItem('loggedInUser')));
+        localStorage.setItem('onlineUsers', JSON.stringify(updated));
+        try { window.Realtime.write('onlineUsers', updated); } catch(e) {}
+      } catch (err) {}
+      localStorage.removeItem("loggedInUser");
+      window.location.href = "index.html";
+    });
+  </script>
+</body>
+</html>

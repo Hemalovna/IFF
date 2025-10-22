@@ -1,0 +1,37 @@
+:root{
+  --bg-a:#2c3e50;
+  --bg-b:#4ca1af;
+  --glass: rgba(255,255,255,0.18);
+  --glass-strong: rgba(255,255,255,0.28);
+  --accent: #4ca1af;
+  --text-on-glass: #ffffff;
+}
+
+html,body{height:100%;margin:0;font-family:Arial,Helvetica,sans-serif;background:linear-gradient(90deg,var(--bg-a),var(--bg-b));-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+
+.topbar{
+  position:fixed;top:0;left:0;right:0;height:64px;display:flex;align-items:center;gap:12px;padding:8px 12px;background:var(--glass);backdrop-filter:blur(10px);
+  border-bottom:1px solid rgba(255,255,255,0.12);box-shadow:0 6px 18px rgba(0,0,0,0.35);z-index:20;
+}
+.iconBtn{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:10px;text-decoration:none;background:transparent;border:none;color:var(--text-on-glass);}
+.iconBtn svg{fill:#fff;opacity:0.95}
+
+.logout{margin-left:auto;padding:8px 14px;height:40px;border-radius:10px;background:darkgrey;color:white;font-weight:700;border:2px solid black;-webkit-text-stroke:0.6px black;text-shadow:1px 1px 2px black;font-size:0.95rem;cursor:pointer;transition:transform .15s ease,background .2s ease;}
+.logout:hover{transform:scale(1.03);background:grey}
+
+.container{padding-top:92px;display:flex;flex-direction:column;align-items:center;gap:18px;padding-left:16px;padding-right:16px;min-height:100vh;box-sizing:border-box;}
+
+section{width:100%;max-width:600px;background:var(--glass-strong);padding:16px;border-radius:16px;border:1px solid rgba(255,255,255,0.2);box-shadow:0 6px 20px rgba(0,0,0,0.3);}
+
+h2{color:var(--accent);margin-top:0;font-size:1.2rem;font-weight:700;text-align:center;}
+
+input[type=text]{width:60%;padding:8px;margin-right:6px;border-radius:8px;border:1px solid rgba(255,255,255,0.4);background:var(--glass);color:white;}
+
+input[type=file]{margin-right:6px;}
+
+button{padding:6px 12px;border-radius:8px;background:var(--accent);border:none;color:white;font-weight:700;cursor:pointer;transition:0.2s;}
+button:hover{background:#359db8;}
+
+.teamItem,.seasonItem{display:flex;align-items:center;justify-content:space-between;background:var(--glass);padding:8px 12px;margin-top:8px;border-radius:8px;color:white;box-shadow:0 4px 12px rgba(0,0,0,0.3);}
+.teamItem img{height:32px;width:32px;border-radius:4px;margin-right:8px;object-fit:cover;}
+.teamButtons button{margin-left:4px;padding:4px 8px;font-size:0.85rem;}
